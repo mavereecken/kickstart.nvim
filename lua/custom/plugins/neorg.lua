@@ -7,11 +7,9 @@ return {
   {
     'nvim-neorg/neorg',
     dependencies = { 'luarocks.nvim' },
-    build = ':Neorg sync-parsers',
     -- tag = "*",
-    lazy = true, -- enable lazy load
-    ft = 'norg', -- lazy load on file type
-    cmd = 'Neorg', -- lazy load on command
+    lazy = false, -- enable lazy load
+    version="*",
     config = function()
       require('neorg').setup {
         load = {
