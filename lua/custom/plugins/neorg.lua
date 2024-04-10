@@ -18,7 +18,7 @@ return {
             config = {
               workspaces = {
                 notes = '~/notes',
-                gna = '~/projects/gna/analysis/notes',
+                gna = '~/projects/gna/2024_gna_analysis/notes',
               },
             },
           },
