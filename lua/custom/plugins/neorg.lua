@@ -9,7 +9,7 @@ return {
   },
   {
     'nvim-neorg/neorg',
-    dependencies = { 'luarocks.nvim' },
+    dependencies = { 'luarocks.nvim', 'otter.nvim' },
     lazy = false,
     version = '*',
     config = function()
@@ -25,6 +25,13 @@ return {
               },
             },
           },
+          ['core.integrations.otter'] = {},
+          ['core.completion'] = {
+            config = {
+              engine = 'nvim-cmp',
+            },
+          },
+          -- ['core.latex.renderer'] = {}, -- this requires nvim 0.10
         },
       }
     end,
@@ -67,6 +74,11 @@ return {
       -- these are examples, not defaults. Please see the readme
       vim.g.molten_image_provider = 'image.nvim'
       vim.g.molten_output_win_max_height = 20
+      vim.keymap.set('n', '<localleader>mi', ':MoltenInit<CR>', { silent = true, desc = 'Initialize the plugin' })
+      vim.keymap.set('n', '<localleader>me', ':MoltenEvaluateOperator<CR>', { silent = true, desc = 'run operator selection' })
+      vim.keymap.set('n', '<localleader>ml', ':MoltenEvaluateLine<CR>', { silent = true, desc = 'evaluate line' })
+      vim.keymap.set('n', '<localleader>mr', ':MoltenReevaluateCell<CR>', { silent = true, desc = 're-evaluate cell' })
+      vim.keymap.set('v', '<localleader>mv', ':<C-u>MoltenEvaluateVisual<CR>gv', { silent = true, desc = 'evaluate visual selection' })
     end,
   },
 }
