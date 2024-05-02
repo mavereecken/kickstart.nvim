@@ -9,7 +9,7 @@ return {
   },
   {
     'nvim-neorg/neorg',
-    dependencies = { 'luarocks.nvim', 'otter.nvim' },
+    dependencies = { 'luarocks.nvim', 'jmbuhr/otter.nvim' },
     lazy = false,
     version = '*',
     config = function()
