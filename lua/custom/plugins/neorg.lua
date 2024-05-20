@@ -78,6 +78,7 @@ return {
       vim.keymap.set('n', '<localleader>je', ':MoltenEvaluateOperator<CR>', { silent = true, desc = 'run operator selection' })
       vim.keymap.set('n', '<localleader>jl', ':MoltenEvaluateLine<CR>', { silent = true, desc = 'evaluate line' })
       vim.keymap.set('n', '<localleader>jr', ':MoltenReevaluateCell<CR>', { silent = true, desc = 're-evaluate cell' })
+      vim.keymap.set('n', '<localleader>jo', ':noautocmd MoltenEnterOutput<CR>', { silent = true, desc = 'show/enter output' })
       vim.keymap.set('v', '<localleader>jv', ':<C-u>MoltenEvaluateVisual<CR>gv', { silent = true, desc = 'evaluate visual selection' })
     end,
   },
