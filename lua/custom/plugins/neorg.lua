@@ -73,7 +73,7 @@ return {
     init = function()
       -- these are examples, not defaults. Please see the readme
       vim.g.molten_image_provider = 'image.nvim'
-      vim.g.molten_output_win_max_height = 20
+      --vim.g.molten_output_win_max_height = 20
       vim.keymap.set('n', '<localleader>ji', ':MoltenInit<CR>', { silent = true, desc = 'Initialize the plugin' })
       vim.keymap.set('n', '<localleader>je', ':MoltenEvaluateOperator<CR>', { silent = true, desc = 'run operator selection' })
       vim.keymap.set('n', '<localleader>jl', ':MoltenEvaluateLine<CR>', { silent = true, desc = 'evaluate line' })
